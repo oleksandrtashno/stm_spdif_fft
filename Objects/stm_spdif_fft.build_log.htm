@@ -1,0 +1,345 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Alex Tashno, FuckThisShitImOut, LIC=IK1BF-6FZ6M-VEDHA-1WKED-PR17X-ANXU8
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+I:\Documents\stm32\stm_spdif_fft\stm_spdif_fft.uvprojx
+Project File Date:  01/23/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(26): warning: In file included from...
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ( in) - 1));
+                              ~~~~~  ^~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ(-in) - 1));
+                              ~~~~~ ^~~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ( in) - 17));
+                             ~~~~~  ^~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ(-in) - 17));
+                             ~~~~~ ^~~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    in = (in << signBits);
+       ~  ~~~^~~~~~~~~~~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+      out = (q15_t) (((q31_t) out * tempVal) >> 14);
+                      ^~~~~~~~~~~ ~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    n1 = __CLZ(hi) - 32;
+         ~~~~~ ^~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        n1 = __CLZ(lo);
+             ~~~~~ ^~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                                              ~  ~~~^~~~~~~~~~~~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~           ^~~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~                 ^~~~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x0 = S->x1 +  i      * xSpacing;
+                    ^      ~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x1 = S->x1 + (i + 1) * xSpacing;
+                    ~~^~~  ~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    xdiff = X - xIndex;
+              ~ ^~~~~~
+C:/Users/ALEX/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    ydiff = Y - yIndex;
+              ~ ^~~~~~
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(60): warning: no previous extern declaration for non-static variable 'fft_complete_flag' [-Wmissing-variable-declarations]
+volatile bool fft_complete_flag = false;
+              ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(60): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile bool fft_complete_flag = false;
+         ^
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+    #define bool _Bool
+                 ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(114): warning: implicitly declaring library function 'scanf' with type 'int (const char *restrict, ...)' [-Wimplicit-function-declaration]
+                scanf("%s", asd);
+                ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(114): note: include the header <stdio.h> or explicitly provide a declaration for 'scanf'
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(115): warning: implicitly declaring library function 'printf' with type 'int (const char *, ...)' [-Wimplicit-function-declaration]
+                printf("%s\n", asd);}
+                ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(115): note: include the header <stdio.h> or explicitly provide a declaration for 'printf'
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(139): warning: incompatible pointer types passing 'float32_t [2048]' to parameter of type 'uint8_t *' (aka 'unsigned char *') [-Wincompatible-pointer-types]
+                HAL_UART_Transmit(&huart3, freq_domain, FFT_LENGTH / 2 * sizeof(float32_t), UINT32_MAX);
+                                           ^~~~~~~~~~~
+C:/Users/ALEX/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal_uart.h(1434): note: passing argument to parameter 'pData' here
+HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                                                                        ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(118): warning: code will never be executed [-Wunreachable-code]
+        dsp_fft_init(FFT_LENGTH);
+        ^~~~~~~~~~~~
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(21): warning: In file included from...
+./RTE/Device/STM32F767ZITx/STCubeGenerated/Inc\main.h(31): warning: In file included from...
+C:/Users/ALEX/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F767ZITx/STCubeGenerated/Inc\stm32f7xx_hal_conf.h(398): warning: In file included from...
+C:/Users/ALEX/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal_spdifrx.h(163): warning: padding struct 'SPDIFRX_HandleTypeDef' with 2 bytes to align 'ErrorCode' [-Wpadded]
+  __IO uint32_t  ErrorCode;                /* SPDIFRX Error code */
+                 ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(21): warning: In file included from...
+./RTE/Device/STM32F767ZITx/STCubeGenerated/Inc\main.h(31): warning: In file included from...
+C:/Users/ALEX/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F767ZITx/STCubeGenerated/Inc\stm32f7xx_hal_conf.h(410): warning: In file included from...
+C:/Users/ALEX/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal_uart.h(207): warning: padding struct 'struct __UART_HandleTypeDef' with 2 bytes to align 'RxISR' [-Wpadded]
+  void (*RxISR)(struct __UART_HandleTypeDef *huart); /*!< Function pointer on Rx IRQ handler */
+         ^
+C:/Users/ALEX/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal_uart.h(217): warning: padding struct 'struct __UART_HandleTypeDef' with 3 bytes to align 'gState' [-Wpadded]
+  __IO HAL_UART_StateTypeDef    gState;              /*!< UART state information related to global Handle management
+                                ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(335): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                huart3.Instance->TDR = (uint8_t)(ch & 0xFFU);
+                                                 ^~ ~
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(333): warning: no previous prototype for function 'stdout_putchar' [-Wmissing-prototypes]
+int stdout_putchar (int ch) {
+    ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(333): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int stdout_putchar (int ch) {
+^
+static 
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(21): warning: In file included from...
+./RTE/Device/STM32F767ZITx/STCubeGenerated/Inc\main.h(31): warning: In file included from...
+C:/Users/ALEX/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F767ZITx/STCubeGenerated/Inc\stm32f7xx_hal_conf.h(282): warning: In file included from...
+C:/Users/ALEX/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal_dma.h(148): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
+  void                       *Parent;                                                      /*!< Parent object state                    */ 
+                              ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(345): warning: no previous prototype for function 'stdin_getchar' [-Wmissing-prototypes]
+int stdin_getchar (void) {
+    ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(345): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int stdin_getchar (void) {
+^
+static 
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(355): warning: declaration shadows a variable in the global scope [-Wshadow]
+void HAL_SPDIFRX_RxCpltCallback(SPDIFRX_HandleTypeDef *hspdif)
+                                                       ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(50): note: previous declaration is here
+SPDIFRX_HandleTypeDef hspdif;
+                      ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(361): warning: incompatible pointer types passing 'SPDIFRX_HandleTypeDef **' to parameter of type 'SPDIFRX_HandleTypeDef *'; remove & [-Wincompatible-pointer-types]
+        HAL_SPDIFRX_ReceiveDataFlow_DMA(&hspdif, (uint32_t*)samples, FFT_LENGTH);
+                                        ^~~~~~~
+C:/Users/ALEX/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal_spdifrx.h(504): note: passing argument to parameter 'hspdif' here
+HAL_StatusTypeDef HAL_SPDIFRX_ReceiveDataFlow_DMA(SPDIFRX_HandleTypeDef *hspdif, uint32_t *pData, uint16_t Size);
+                                                                         ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(373): warning: declaration shadows a variable in the global scope [-Wshadow]
+void HAL_SPDIFRX_ErrorCallback(SPDIFRX_HandleTypeDef *hspdif)
+                                                      ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(50): note: previous declaration is here
+SPDIFRX_HandleTypeDef hspdif;
+                      ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(385): warning: function 'Error_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(50): warning: no previous extern declaration for non-static variable 'hspdif' [-Wmissing-variable-declarations]
+SPDIFRX_HandleTypeDef hspdif;
+                      ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(50): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+SPDIFRX_HandleTypeDef hspdif;
+^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(51): warning: no previous extern declaration for non-static variable 'hdma_spdif_rx_dt' [-Wmissing-variable-declarations]
+DMA_HandleTypeDef hdma_spdif_rx_dt;
+                  ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(51): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+DMA_HandleTypeDef hdma_spdif_rx_dt;
+^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(53): warning: no previous extern declaration for non-static variable 'huart3' [-Wmissing-variable-declarations]
+UART_HandleTypeDef huart3;
+                   ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(53): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+UART_HandleTypeDef huart3;
+^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(56): warning: no previous extern declaration for non-static variable 'samples' [-Wmissing-variable-declarations]
+int32_t samples[FFT_LENGTH];
+        ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(56): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int32_t samples[FFT_LENGTH];
+^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(57): warning: no previous extern declaration for non-static variable 'time_domain' [-Wmissing-variable-declarations]
+float32_t time_domain[FFT_LENGTH];
+          ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(57): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+float32_t time_domain[FFT_LENGTH];
+^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(58): warning: no previous extern declaration for non-static variable 'freq_domain' [-Wmissing-variable-declarations]
+float32_t freq_domain[FFT_LENGTH];
+          ^
+RTE/Device/STM32F767ZITx/STCubeGenerated/Src/main.c(58): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+float32_t freq_domain[FFT_LENGTH];
+^
+42 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=18174 RO-data=2910 RW-data=24 ZI-data=26792  
+".\Objects\stm_spdif_fft.axf" - 0 Error(s), 42 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+   * Component: DSP Variant: Source Version: 1.8.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.ARM_Compiler.1.6.3.pack
+                Keil.ARM_Compiler.1.6.3
+                Keil ARM Compiler extensions for ARM Compiler 5 and ARM Compiler 6
+   * Component: STDIN Variant: User Version: 1.2.0
+   * Component: STDOUT Variant: User Version: 1.2.0
+
+Package Vendor: Keil
+                project-path/Keil.FrameworkCubeMX.1.0.0.pack
+                Keil.FrameworkCubeMX.1.0.0
+                STM32CubeMX generated pack description
+   * Component: STM32CubeMX Version: 1.1.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F7xx_DFP.2.13.0.pack
+                Keil.STM32F7xx_DFP.2.13.0
+                STMicroelectronics STM32F7 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 1.0.0
+   * Component: Common Version: 1.2.8
+   * Component: Cortex Version: 1.2.8
+   * Component: DMA Version: 1.2.8
+   * Component: GPIO Version: 1.2.8
+   * Component: PWR Version: 1.2.8
+   * Component: RCC Version: 1.2.8
+   * Component: SPDIFRX Version: 1.2.8
+   * Component: UART Version: 1.2.8
+   * Component: Startup Version: 1.2.5
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F767ZITx
+  .\RTE\Device\STM32F767ZITx\STCubeGenerated\Inc
+  .\RTE\_Target_1
+  C:\Users\ALEX\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\ALEX\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\DSP\Include
+  C:\Users\ALEX\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\DSP\PrivateInclude
+  C:\Users\ALEX\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include
+  C:\Users\ALEX\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.13.0\Drivers\STM32F7xx_HAL_Driver\Inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Device:STM32Cube Framework:1.0.0 (API)
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: ARM::CMSIS:DSP:Source:1.8.0
+      Source file:   CMSIS\DSP\Source\FastMathFunctions\FastMathFunctions.c
+      Source file:   CMSIS\DSP\Source\StatisticsFunctions\StatisticsFunctions.c
+      Source file:   CMSIS\DSP\Source\ControllerFunctions\ControllerFunctions.c
+      Source file:   CMSIS\DSP\Source\SupportFunctions\SupportFunctions.c
+      Source file:   CMSIS\DSP\Source\TransformFunctions\TransformFunctions.c
+      Include file:  CMSIS\DSP\Include\arm_math.h
+      Source file:   CMSIS\DSP\Source\SVMFunctions\SVMFunctions.c
+      Source file:   CMSIS\DSP\Source\BayesFunctions\BayesFunctions.c
+      Source file:   CMSIS\DSP\Source\CommonTables\CommonTables.c
+      Source file:   CMSIS\DSP\Source\DistanceFunctions\DistanceFunctions.c
+      Source file:   CMSIS\DSP\Source\FilteringFunctions\FilteringFunctions.c
+      Source file:   CMSIS\DSP\Source\MatrixFunctions\MatrixFunctions.c
+      Source file:   CMSIS\DSP\Source\BasicMathFunctions\BasicMathFunctions.c
+      Source file:   CMSIS\DSP\Source\ComplexMathFunctions\ComplexMathFunctions.c
+
+   * Component: Keil.ARM Compiler::Compiler:I/O:STDIN:User:1.2.0
+      Source file:   Source\retarget_io.c
+      Source file:   Template\stdin_user.c
+      Source file:   Template\stdin_USART.c
+      Source file:   Template\stdin_keyboard.c
+
+   * Component: Keil.ARM Compiler::Compiler:I/O:STDOUT:User:1.2.0
+      Source file:   Template\stdout_USART.c
+      Source file:   Template\stdout_user.c
+      Source file:   Source\retarget_io.c
+      Source file:   Template\stdout_display.c
+
+   * Component: Keil::Device:STM32Cube Framework:STM32CubeMX:1.1.0
+      Include file:  STCubeGenerated\Inc\stm32f7xx_hal_conf.h
+      Include file:  MX_Device.h
+      Source file:   STCubeGenerated\Src\stm32f7xx_hal_msp.c
+
+   * Component: Keil::Device:STM32Cube HAL:Common:1.2.8
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal.c
+      Include file:  Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal.h
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex:1.2.8
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:DMA:1.2.8
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma_ex.c
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO:1.2.8
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR:1.2.8
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_pwr_ex.c
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_pwr.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC:1.2.8
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc_ex.c
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc.c
+
+   * Component: Keil::Device:STM32Cube HAL:SPDIFRX:1.2.8
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_spdifrx.c
+
+   * Component: Keil::Device:STM32Cube HAL:UART:1.2.8
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_uart.c
+      Source file:   Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_uart_ex.c
+
+   * Component: Keil::Device:Startup:1.2.5
+      Source file:   MDK\Device\Source\ARM\STM32F76x_77x_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F76x_77x_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\arm\startup_stm32f767xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\system_stm32f7xx.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
